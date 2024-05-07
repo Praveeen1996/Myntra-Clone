@@ -32,3 +32,5 @@ jobs:
           docker push praveenhema/myntra:latest
         env:
           DOCKER_CLI_ACI: 1
+      - name: Run the container
+        run: docker run -d --name myntra -p 3000:3000 praveenhema/myntra:latest
